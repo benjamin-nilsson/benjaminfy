@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="A">Detta är en rubrik</h1>
+
+    <p id="B">Detta är en paragraf</p>
+
+    <img id="A" src="Images/katt.jpg" alt="A cat">
+
+    <p id="o">Här ska text hamna</p>
+
+    <form action="">
+        <input type="button" value="Ändra bild" onclick="change()">
+        <input id="C" type="button" value="Ändra" onclick="bytText()">
+        <input type="text" name="a" value="Lite gammal text1">
+        <input type="text" name="a" value="Lite gammal text2">
+        <input type="text" name="a" value="Lite gammal text3">
+    </form>
+    <script>
+        function change() {
+            animal = document.getElementById("A");
+            if(animal.src.match("Images/katt.jpg"))
+                animal.src = "Images/dragon.jpg";
+
+            else
+                animal.src = "Images/katt.jpg";
+        }
+
+        function bytText() {
+            document.getElementById("A").innerHTML = "Ny rubrik";
+            document.getElementById("C").value = "Ny text på knappen";
+        }
+
+        ruta = document.getElementsByName("a");
+        pRuta = document.getElementById("o");
+        pRuta.innerHTML = "";
+        for(var i = 0; i < ruta.length; i++) {
+            pRuta.innerHTML += ruta[i].value + "<br>";
+        }
+
+        elever = ["Benjamin", "Natte", "William"];
+        elever[3] = "Olivia";
+        elever[4] = prompt("Mata in ny elev");
+        document.write(elever);
+    </script>
+</body>
+</html>
