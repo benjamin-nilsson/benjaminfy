@@ -1,3 +1,5 @@
+@import "./normalize.css";
+
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
@@ -368,7 +370,7 @@ a {
 
 .plan__description {
   font-size: 2rem;
-  font-size: 300;
+  font-weight: 300;
   letter-spacing: 1px;
   display: block;
 }
